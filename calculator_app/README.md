@@ -39,7 +39,7 @@ subtraction, multiplication, and division. The application is built using Tkinte
     ```
 
 4. The calculator app window should appear, allowing you to perform calculations.
-    [calculator]("calculator.png")
+    ![calculator]("calculator.png")
 
 ## How to Test
 
