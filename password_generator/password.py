@@ -1,20 +1,18 @@
-import random
-import string
+import random #this generates a random number
+import string # this is an import of letters
 
 def generate_password(length):
     """
     Generates a random password of the specified length.
-
     Parameters:
     - length (int): Desired length of the password.
 
     Returns:
     - str: Randomly generated password.
     """
-    # Combine lowercase letters, uppercase letters, digits, and special characters
+    #below combines numbers, strings and special characters all together
     characters = string.ascii_letters + string.digits + string.punctuation
-
-    # Generate a password by randomly selecting characters
+    #below generates a random mixture of characters, numbers and strings stored in characters variable
     password = ''.join(random.choice(characters) for _ in range(length))
 
     return password
