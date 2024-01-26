@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Contacts</h1>
+    <ul>
+    {% for contact in contacts %}
+        <li>
+            <h2>{{ contact.name }}</h2>
+            <p>Phone Number: {{ contact.phone_number }}</p>
+            <p>Email: {{ contact.email }}</p>
+            <p>Address: {{ contact.address }}</p>
+            <!-- Add more contact details here -->
+            <a href="{{ url_for('edit_contact', id=contact.id) }}">Edit</a>
+            <form action="{{ url_for('delete_contact', id=contact.id) }}" method="post">
+                <input type="submit" value="Delete">
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_contact') }}">Add Contact</a>
+{% endblock %}
