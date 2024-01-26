@@ -1,0 +1,45 @@
+.contain{
+    background: linear-gradient(160deg, #4c6baa, #713b7e);
+    margin: 40px;
+    border-radius: 15px;
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.navbar a{
+    color: aliceblue;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border :2px solid black;
+    justify-content: center;
+
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li{
+    display: flex;
+    border :2px solid black;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+a{
+    color: aliceblue;
+    font-size: large;
+}
