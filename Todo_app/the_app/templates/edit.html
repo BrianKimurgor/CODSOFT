@@ -5,7 +5,7 @@
    <div class="row">
       <div class="col" a>
          <!-- A column inside a row inside a container! -->
-         <form action="" method="post">
+         <form action="{{ url_for('tasks.edit_task', id=task.id) }}" method="post">
             <p>
                {{ form.task_name.label }}<br>
                {{ form.task_name(size =32) }}
@@ -18,7 +18,8 @@
                {{ form.status.label }}<br>
                {{ form.status() }}
             </p>
-            <p>{{ form.submit() }}</p>
+               <p>{{ form.submit() }}</p>
+
          </form>
       </div>
    </div>

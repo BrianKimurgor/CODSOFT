@@ -11,7 +11,7 @@ todo = Blueprint('tasks', __name__)
 @todo.route('/')
 @todo.route('/home')
 def home():
-    return render_template('index.html')
+    return render_template('todo.html')
 
 
 
@@ -81,7 +81,7 @@ def todos():
 def edit_task(id):
     user = current_user
     form = EditTodoForm()
-    task = Task.query.filter_by(id =id,todo_owner = current_user.id).first()
+    task = Task.query.filter_by(id=id, todo_owner=current_user.id).first()
 
     if form.validate_on_submit():
         task.task_name = form.task_name.data
@@ -94,7 +94,7 @@ def edit_task(id):
         form.task_name.data = task.task_name
         form.due_date.data = task.due_date
         form.status.data = task.status
-    return render_template('edit.html',form=form)
+    return render_template('edit.html',form=form, task=task)
 
 
 
